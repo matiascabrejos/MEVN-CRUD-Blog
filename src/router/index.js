@@ -5,17 +5,17 @@ import EditBlog from "../components/EditBlog.vue";
 
 const routes = [
   {
-    path: "/",
-    name: "Home",
+    path: "/create-blog",
+    name: "Create Blog",
     component: CreateBlog,
   },
   {
-    path: "/view",
-    name: "View",
+    path: "/",
+    name: "Home",
     component: ListBlog,
   },
   {
-    path: "/edit/:id",
+    path: "/edit-blog/:id",
     name: "Edit",
     component: EditBlog,
   },
