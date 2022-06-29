@@ -1,15 +1,5 @@
 <template>
   <div>
-    <h1>Create a blog</h1>
-    <form @submit.prevent="submitForm">
-      <label for="title">Title</label>
-      <input type="text" v-model="blog.title" />
-      <label for="decription">Description</label>
-      <input type="text" v-model="blog.description" />
-      <label for="image">Image</label>
-      <input type="text" v-model="blog.imageUrl" />
-      <button type="submit">Submit</button>
-    </form>
     <body class="bg-gray-800 text-gray-100 px-8 py-12">
       <form @submit.prevent="submitForm">
         <div
@@ -87,7 +77,7 @@ export default {
       axios
         .post(apiURL, this.blog)
         .then(() => {
-          this.$router.push("/view");
+          this.$router.push("/");
           this.blog = {
             title: "",
             description: "",

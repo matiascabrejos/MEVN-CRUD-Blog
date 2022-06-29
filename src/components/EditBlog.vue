@@ -1,16 +1,5 @@
 <template>
   <div>
-    <h1>Edit data</h1>
-    <form @submit.prevent="updateForm">
-      <label for="">Title</label>
-      <input type="text" name="" id="" v-model="blog.title" />
-      <label for="">Descrpition</label>
-      <input type="text" name="" id="" v-model="blog.description" />
-      <label for="">Image</label>
-      <input type="text" name="" id="" v-model="blog.imageUrl" />
-      <button type="submit">Update</button>
-    </form>
-
     <body class="bg-gray-800 text-gray-100 px-8 py-12">
       <form @submit.prevent="updateForm">
         <div
