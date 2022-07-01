@@ -18,7 +18,7 @@
         :key="blog._id"
       >
         <div
-          class="hover:bg-gray-900 hover:text-white transition duration-300 max-w-sm rounded overflow-hidden shadow-lg"
+          class="hover:bg-gray-800 hover:text-white transition duration-300 max-w-sm rounded overflow-hidden shadow-lg"
         >
           <div class="py-4 px-8">
             <a href="#">

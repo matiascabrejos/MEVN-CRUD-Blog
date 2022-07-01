@@ -1,6 +1,6 @@
 <template>
   <div>
-    <nav class="wrapper py-6">
+    <nav class="wrapper py-6 bg-gray-800">
       <div class="px-10 flex justify-between items-center">
         <div class="logo">
           <router-link to="/">
@@ -92,7 +92,6 @@ export default {
   color: white;
 }
 nav {
-  background-color: #0e1118;
   border-bottom: 3px solid #17b5cb;
 }
 svg {
