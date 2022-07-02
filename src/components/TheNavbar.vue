@@ -92,19 +92,19 @@ export default {
   color: white;
 }
 nav {
-  border-bottom: 3px solid #17b5cb;
+  border-bottom: 3px solid #ff41aa;
 }
 svg {
   color: white;
 }
 svg:hover {
-  color: #17b5cb;
+  color: #ff41aa;
 }
 a.active {
-  color: #17b5cb;
+  color: #ff41aa;
 }
 a:hover {
-  color: #17b5cb;
+  color: #ff41aa;
 }
 .navbar-text-logo {
   @apply text-2xl font-semibold text-white;
