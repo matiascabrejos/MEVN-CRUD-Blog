@@ -22,11 +22,11 @@
         >
           <div class="py-4 px-8">
             <a href="#">
-              <h4 class="text-lg mb-3 font-semibold">
+              <h4 class="text-lg mb-1 font-semibold">
                 {{ blog.title }}
               </h4>
             </a>
-            <p class="mb-2 text-sm text-gray-600">
+            <p class="mb-3 text-sm">
               {{ blog.description }}
             </p>
 
@@ -38,7 +38,7 @@
             >
             &nbsp;<button
               @click.prevent="deleteBlog(blog._id)"
-              class="text-xs text-gray-500"
+              class="text-xs"
             >
               DELETE
             </button>
