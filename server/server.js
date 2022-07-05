@@ -3,11 +3,13 @@ const morgan = require("morgan");
 const mongoose = require("mongoose");
 const cors = require("cors");
 
+require("dotenv").config();
+
 const app = express();
 
 mongoose
-  .connect("mongodb://localhost/mevn-db-test")
-  .then((db) => {
+  .connect(process.env.MONGO_URI)
+  .then(() => {
     console.log("DB connected!");
   })
   .catch((err) => {
