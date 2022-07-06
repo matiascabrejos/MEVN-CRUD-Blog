@@ -36,7 +36,7 @@
                 class="object-cover h-48 w-96 mx-auto rounded-sm"
               />
 
-              <hr class="mt-4" />
+              <hr class="mt-4 border-gray-400" />
               <router-link :to="'/edit-blog/' + blog._id" class="text-xs"
                 >EDIT</router-link
               >
