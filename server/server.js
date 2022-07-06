@@ -3,6 +3,8 @@ const morgan = require("morgan");
 const mongoose = require("mongoose");
 const cors = require("cors");
 
+const path = require("path");
+
 require("dotenv").config();
 
 const app = express();
@@ -25,12 +27,10 @@ app.use(cors());
 
 app.use("/blogs", require("./routes/blogs"));
 
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static(__dirname + "/public/"));
-  app.get(/.*/, (req, res) => {
-    res.sendFile(__dirname + "/public/index.html");
-  });
-}
+app.use(express.static(path.join(__dirname, "./dist")));
+app.get("/*", (req, res) => {
+  res.sendFile(path.join(__dirname, "./dist", "index.html"));
+});
 
 app.listen(app.get("port"), () => {
   console.log("Server running on port", app.get("port"));
