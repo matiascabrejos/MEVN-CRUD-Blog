@@ -65,12 +65,12 @@ export default {
     };
   },
   created() {
-    let apiURL = `http://localhost:3000/blogs/${this.$route.params.id}`;
+    let apiURL = `blogs/${this.$route.params.id}`;
     axios.get(apiURL).then((res) => (this.blog = res.data));
   },
   methods: {
     updateForm() {
-      let apiURL = `http://localhost:3000/blogs/edit-blog/${this.$route.params.id}`;
+      let apiURL = `blogs/edit-blog/${this.$route.params.id}`;
       axios
         .put(apiURL, this.blog)
         .then((res) => {

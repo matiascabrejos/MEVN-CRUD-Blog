@@ -64,7 +64,7 @@ export default {
     };
   },
   created() {
-    let apiURL = "http://localhost:3000/blogs";
+    let apiURL = "blogs";
 
     axios
       .get(apiURL)
@@ -77,7 +77,7 @@ export default {
   },
   methods: {
     deleteBlog(id) {
-      let apiURL = "http://localhost:3000/blogs/delete/" + id;
+      let apiURL = "blogs/delete/" + id;
       let indexOfArrayItem = this.Blogs.findIndex((i) => i._id === id);
 
       if (window.confirm("Do you really want to delete?")) {

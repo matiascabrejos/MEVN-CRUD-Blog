@@ -72,7 +72,7 @@ export default {
   },
   methods: {
     submitForm() {
-      let apiURL = "http://localhost:3000/blogs/create-blog";
+      let apiURL = "blogs/create-blog";
 
       axios
         .post(apiURL, this.blog)
