@@ -25,6 +25,13 @@ app.use(cors());
 
 app.use("/blogs", require("./routes/blogs"));
 
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(__dirname + "/dist/"));
+  app.get("*", (req, res) => {
+    res.sendFile(__dirname + "/dist/index.html");
+  });
+}
+
 app.listen(app.get("port"), () => {
   console.log("Server running on port", app.get("port"));
 });
